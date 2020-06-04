@@ -37,16 +37,6 @@ button {
   margin: -1px;
 }
 
-.link-port {
-  display: block;
-  text-decoration: none;
-  border-top-left-radius: 1px;
-  border-top-left-radius: 1px;
-  overflow: hidden;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
-}
-
 .list {
   padding: 0;
   margin: 0;
@@ -615,6 +605,16 @@ button {
   margin-bottom: 0;
 }
 
+.link-port {
+  display: block;
+  text-decoration: none;
+  border-top-left-radius: 1px;
+  border-top-left-radius: 1px;
+  /* overflow: hidden; */
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
 .portfolio-box {
   /* text-decoration: none; */
   padding-left: 24px;
@@ -633,6 +633,11 @@ button {
   display: block;
 }
 
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
 .portfolio-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -640,6 +645,7 @@ button {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--primary-text-color);
 }
 
 .portfolio-text {
@@ -650,14 +656,29 @@ button {
   line-height: 1.87;
   letter-spacing: 0.03em;
   /* background-color: grey; */
+  color: var(--secondary-text-color);
 }
 
 .portfolio-descriprion {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 500ms;
+}
+
+.link-port:hover .portfolio-descriprion {
+  transform: translateY(0%);
 }
 
 .button-pf {
