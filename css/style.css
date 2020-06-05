@@ -93,6 +93,7 @@ button {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 84px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -102,9 +103,33 @@ button {
   color: black;
 }
 
+.li-psevdo {
+  position: relative;
+}
+
+.psevdo::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent);
+  /* opacity: 0; */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scaleX(0);
+}
+
+.psevdo:hover::after {
+  /* opacity: 1; */
+  transform: scaleX(1);
+}
+
 .site-nav {
   display: flex;
-  margin-left: 84px;
+  /* margin-left: 84px; */
 }
 
 .site-nav .item {
@@ -216,6 +241,16 @@ button {
   background-position: center;
 }
 
+.hero-block {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* outline: 2px solid tomato; */
+}
+
 .hero {
   /* border-top: 1px solid #ececec; */
   /* background-color: #cccccc; */
@@ -230,6 +265,7 @@ button {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--white);
 }
 
 /* преимущества */
@@ -323,6 +359,25 @@ button {
   margin-right: 0;
 }
 
+.experience-image {
+  position: relative;
+}
+
+.image-block {
+  display: block;
+}
+
+.experience-thumb {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 27px 82px;
+  /* outline: 2px solid tomato; */
+  left: 0;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .experience-text {
   margin-top: 0;
   margin-bottom: 0;
@@ -332,7 +387,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   /* color: var(--white); */
-  color: #212121;
+  color: var(--white);
   text-align: center;
 }
 
@@ -674,7 +729,7 @@ button {
   color: var(--white);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 500ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-port:hover .portfolio-descriprion {
