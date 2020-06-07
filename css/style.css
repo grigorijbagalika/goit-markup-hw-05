@@ -223,7 +223,8 @@ button {
 
 .hero-block {
   text-align: center;
-  padding: 200px 458px;
+  padding-top: 200px;
+  /* padding: 200px 458px; */
 }
 
 .hero {
