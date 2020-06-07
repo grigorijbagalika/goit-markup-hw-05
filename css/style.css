@@ -417,12 +417,6 @@ button {
   margin-right: 0;
 }
 
-/* .social {
-  display: flex;
-  width: 206px;
-  height: 44px;
-} */
-
 .image-com {
   margin-bottom: 30px;
 }
@@ -457,6 +451,14 @@ button {
   align-items: center;
 }
 
+.social_item {
+  margin-right: 10px;
+}
+
+.social_item:last-child {
+  margin-right: 0;
+}
+
 .button-icon {
   display: inline-flex;
   width: 44px;
@@ -467,20 +469,13 @@ button {
 }
 
 .button-icon:hover {
-  border-radius: 100%;
   background-color: var(--accent);
+  --color3: white;
 }
 
 .svg-icon {
   --color1: #afb1b8;
-  width: 20px;
-  height: 20px;
 }
-
-.svg-icon:hover {
-  --color3: white;
-}
-
 /* clients */
 
 .clients {
@@ -540,14 +535,6 @@ button {
   margin-bottom: 12px;
 }
 
-/* .adress-flex {
-  margin-right: 69px;
-} */
-
-/* .sub-flex {
-  margin-left: auto;
-} */
-
 .s-link {
   display: flex;
   width: 206px;
@@ -557,6 +544,10 @@ button {
   list-style: none;
   justify-content: space-around;
   align-items: center;
+}
+
+.svg-icon_footer {
+  --color3: var(--white);
 }
 
 .footer-list {
