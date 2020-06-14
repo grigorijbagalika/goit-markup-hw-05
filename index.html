@@ -66,7 +66,7 @@
               эффективные решения <br />
               для вашего бизнеса
             </h1>
-            <a href="" class="button">Заказать услугу</a>
+            <a href="index.html" class="button">Заказать услугу</a>
           </div>
         </div>
       </section>
@@ -511,5 +511,33 @@
         <p class="low">&#169; 2020 | Developed by GoIT Students</p>
       </div>
     </footer>
+
+    <button data-open-modal>открыть модалку</button>
+
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <button data-close-modal>Закрыть</button>
+      </div>
+    </div>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
   </body>
 </html>
